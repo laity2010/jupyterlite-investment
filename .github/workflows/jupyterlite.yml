@@ -34,6 +34,7 @@ jobs:
       - name: Build site
         run: |
           mkdir -p content
+          python -m jupytext --to ipynb content/Investment_13e_Basics.md
           jupyter lite build --output-dir _site --contents content
 
       - name: Upload Pages artifact
